@@ -1,0 +1,156 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f7f7f7 0%, #eeedf0 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.password-strength {
+    margin-top: 5px;
+}
+
+#strengthMeter {
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+#strengthMeter div {
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.strength-weak {
+    background-color: red;
+    width: 33%;
+}
+
+.strength-medium {
+    background-color: orange;
+    width: 66%;
+}
+
+.strength-strong {
+    background-color: green;
+    width: 100%;
+}
+
+#strengthText {
+    font-size: 12px;
+    margin-top: 2px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+}

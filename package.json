@@ -1,0 +1,13 @@
+{
+  "name": "intelligent-registration-system",
+  "version": "1.0.0",
+  "description": "Automated registration system with Cypress testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  }
+}

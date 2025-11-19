@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <div id="alert" class="alert hidden"></div>
+        <form id="registrationForm" action="process.php" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="error" id="lastNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="120">
+                <span class="error" id="ageError"></span>
+            </div>
+            <div class="form-group">
+                <label>Gender *</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="checkbox" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    <input type="checkbox" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+                <span class="error" id="genderError"></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address"></textarea>
+                <span class="error" id="addressError"></span>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="IN">India</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <!-- Add more countries as needed -->
+                </select>
+                <span class="error" id="countryError"></span>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" name="state">
+                    <option value="">Select State</option>
+                    <!-- States will be populated based on country -->
+                </select>
+                <span class="error" id="stateError"></span>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <select id="city" name="city">
+                    <option value="">Select City</option>
+                    <!-- Cities will be populated based on state -->
+                </select>
+                <span class="error" id="cityError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <div class="password-strength">
+                    <div id="strengthMeter"></div>
+                    <span id="strengthText"></span>
+                </div>
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms & Conditions *</label>
+                <span class="error" id="termsError"></span>
+            </div>
+            <button type="submit" id="submitBtn" disabled>Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
